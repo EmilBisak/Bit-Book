@@ -61,13 +61,13 @@ class Login extends Component {
                 <form className="col s12">
                     <div className="row">
                         <div className="input-field col s12">
-                            <input id="loginName" type="text" className="validate" required onChange={this.onChangeHandler} />
+                            <input id="loginName" type="text" className="validate" autoComplete="ussername" required onChange={this.onChangeHandler} />
                             <label htmlFor="loginName">Username</label>
                         </div>
                     </div>
                     <div className="row">
                         <div className="input-field col s12">
-                            <input id="loginPassword" type="password" className="validate" required onChange={this.onChangeHandler} />
+                            <input id="loginPassword" type="password" className="validate" autoComplete="current-password" required onChange={this.onChangeHandler} />
                             <label htmlFor="loginPassword">Pass</label>
                         </div>
                     </div>

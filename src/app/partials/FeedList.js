@@ -5,6 +5,7 @@ import { TextPost } from './posts/TextPost';
 import { ImagePost } from './posts/ImagePost';
 import { EmptyFeedMessage } from './EmptyFeedMessage';
 
+
 export class FeedList extends Component {
 
     render() {

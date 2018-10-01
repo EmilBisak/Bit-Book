@@ -27,8 +27,8 @@ class Header extends Component {
                 <nav >
                     <div className="nav-wrapper #00acc1 cyan darken-1">
                         <div className="container">
-                            <a href="/" className="brand-logo">BitBook<i className="material-icons">group</i></a>
-                            <a href="/" data-target="mobile-demo" className="sidenav-trigger right"  ><i className="material-icons">list</i></a>
+                            <a href="/BitBook" className="brand-logo">BitBook<i className="material-icons">group</i></a>
+                            <a href="/BitBook" data-target="mobile-demo" className="sidenav-trigger right"  ><i className="material-icons">list</i></a>
                             <ul className="right hide-on-med-and-down">
                                 <li><Link to="/">Feed</Link></li>
                                 <li><Link to='/people'>People</Link></li>

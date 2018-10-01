@@ -88,13 +88,13 @@ export class Register extends Component {
                     </div>
                     <div className="row">
                         <div className="input-field col s12">
-                            <input id="registerUsername" type="text" className="validate" value={this.state.registerUsername} onChange={this.onChangeHandler} />
+                            <input id="registerUsername" type="text" className="validate" autoComplete="reggister-username" value={this.state.registerUsername} onChange={this.onChangeHandler} />
                             <label htmlFor="registerUsername">Username</label>
                         </div>
                     </div>
                     <div className="row">
                         <div className="input-field col s12">
-                            <input id="registerPassword" type="password" className="validate" value={this.state.registerPassword} onChange={this.onChangeHandler} />
+                            <input id="registerPassword" type="password" className="validate" autoComplete="register-password" value={this.state.registerPassword} onChange={this.onChangeHandler} />
                             <label htmlFor="registerPassword">Pass</label>
                         </div>
                     </div>

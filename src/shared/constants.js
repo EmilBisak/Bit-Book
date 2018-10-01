@@ -1,4 +1,4 @@
-const domain = 'http://bitbookapi.azurewebsites.net';
+const domain = 'https://bitbookapi.azurewebsites.net';
 
 export const COMMENTS = domain + '/api/Comments?postId=';
 export const COMMENTSPOST = domain + '/api/Comments';
