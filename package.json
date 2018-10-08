@@ -2,7 +2,7 @@
   "name": "app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://EmilBisak.github.io/BitBook/",
+  "homepage": "https://emilbisak.github.io/BitBook/",
   "dependencies": {
     "materialize-css": "^1.0.0-rc.1",
     "react": "^16.4.0",
@@ -15,7 +15,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "deploy": "npm run build&&gh-pages -d build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "eject": "react-scripts eject"
   },
   "devDependencies": {
