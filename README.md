@@ -15,9 +15,13 @@ Prerequisites
 Getting Started
 Just clone the repo and start hacking:
 
+
 $ git clone https://github.com/emilbisak/BitBook
+
 $ cd BitBook
+
 $ npm install                     # Install project dependencies listed in package.json
+
 $ npm start                       # Compiles the app and opens it in a browser with "live reload"
 
 
