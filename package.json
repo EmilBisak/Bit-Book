@@ -2,7 +2,7 @@
   "name": "app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://emilbisak.github.io/BitBook/",
+  "homepage": "https://emilbisak.github.io/Bit-Book/",
   "dependencies": {
     "materialize-css": "^1.0.0-rc.1",
     "react": "^16.4.0",
