@@ -1,4 +1,4 @@
-# Bit-Book
+# BitBook
 Final BIT project. Social network mock.
 
 Tech Stack
@@ -15,8 +15,8 @@ Prerequisites
 Getting Started
 Just clone the repo and start hacking:
 
-$ git clone https://github.com/tortikolis/Bit-Book
-$ cd Bit-Book
+$ git clone https://github.com/emilbisak/BitBook
+$ cd BitBook
 $ npm install                     # Install project dependencies listed in package.json
 $ npm start                       # Compiles the app and opens it in a browser with "live reload"
 
