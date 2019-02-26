@@ -20,10 +20,9 @@ class Login extends Component {
             password: loginPassword
         }
 
-        this.props.isLoadingHandler()
         this.sendLoginForm(content)
     }
-
+    
     resetLoginForm = () => {
         this.setState({
             loginName: "",
@@ -31,9 +30,9 @@ class Login extends Component {
             errorMsg: ""
         })
     }
-
+    
     goToHomepage = () => this.props.history.push("/");
-
+    
     sendLoginForm = (data) => {
         this.props.sendLoginData(data)
             .then(({ error }) => {
@@ -41,9 +40,9 @@ class Login extends Component {
                     return this.setState({ errorMsg: error.message })
                 }
 
+                this.props.loadingOn();
                 this.resetLoginForm();
                 this.goToHomepage();
-                this.props.loginSuccess();
             })
     }
 

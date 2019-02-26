@@ -32,12 +32,9 @@ export class LoginRegister extends Component {
         this.setState({ succsessMsg: "Your registration was successfull!" })
     }
 
-    isLoadingHandler = () => {
+    loadingOn = () => {
         this.setState({ isLoading: true })
-    }
-
-    loginSuccess = () => {
-        this.setState({ isLoading: false })
+        M.Tabs.init(this.activeTab.current);
     }
 
 
@@ -65,8 +62,7 @@ export class LoginRegister extends Component {
                         <div id="test-swipe-1" className="col s12 ">
                             <Login
                                 sendLoginData={postLogin}
-                                isLoadingHandler={this.isLoadingHandler}
-                                loginSuccess={this.loginSuccess}
+                                loadingOn={this.loadingOn}
                                 isLoading={this.state.isLoading} />
                         </div>
                         <div id="test-swipe-2" className="col s12 ">
