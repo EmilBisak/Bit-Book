@@ -4,6 +4,7 @@ import M from 'materialize-css';
 import Login from './Login'
 import { Register } from './Register'
 import { postRegister, postLogin } from '../../../services/authService'
+import { Loading } from '../../partials/Loading';
 
 export class LoginRegister extends Component {
     constructor(props) {
@@ -12,7 +13,8 @@ export class LoginRegister extends Component {
         this.loginTab = React.createRef();
         this.tabs = null;
         this.state = {
-            succsessMsg: ""
+            succsessMsg: "",
+            isLoading: false
         }
     }
 
@@ -30,11 +32,22 @@ export class LoginRegister extends Component {
         this.setState({ succsessMsg: "Your registration was successfull!" })
     }
 
+    isLoadingHandler = () => {
+        this.setState({ isLoading: true })
+    }
+
+    loginSuccess = () => {
+        this.setState({ isLoading: false })
+    }
+
 
     render() {
 
 
-        return (
+        return this.state.isLoading
+            ?
+            <Loading />
+            :
             <div className="container" id='login'>
                 <div className='row'>
                     <div className='col s12 m6' id='login-text'>
@@ -50,14 +63,17 @@ export class LoginRegister extends Component {
                             <li className="tab col s6 "><a href="#test-swipe-2" className='teal-text ' id='register'>Register</a></li>
                         </ul>
                         <div id="test-swipe-1" className="col s12 ">
-                            <Login sendLoginData={postLogin} />
+                            <Login
+                                sendLoginData={postLogin}
+                                isLoadingHandler={this.isLoadingHandler}
+                                loginSuccess={this.loginSuccess}
+                                isLoading={this.state.isLoading} />
                         </div>
                         <div id="test-swipe-2" className="col s12 ">
-                            <Register  sendRegisterData={postRegister} loginTab={this.loginTab} activeTab={this.activeTab} onRegister={this.onSuccessfulRegistration}/>
+                            <Register sendRegisterData={postRegister} loginTab={this.loginTab} activeTab={this.activeTab} onRegister={this.onSuccessfulRegistration} />
                         </div>
                     </div>
                 </div>
             </div>
-        )
     }
 }

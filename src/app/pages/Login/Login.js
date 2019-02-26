@@ -20,6 +20,7 @@ class Login extends Component {
             password: loginPassword
         }
 
+        this.props.isLoadingHandler()
         this.sendLoginForm(content)
     }
 
@@ -42,6 +43,7 @@ class Login extends Component {
 
                 this.resetLoginForm();
                 this.goToHomepage();
+                this.props.loginSuccess();
             })
     }
 
@@ -56,7 +58,6 @@ class Login extends Component {
     render() {
 
         return (
-
             <div className="row">
                 <form className="col s12">
                     <div className="row">
@@ -78,7 +79,6 @@ class Login extends Component {
                 </form>
             </div>
         )
-
     }
 
 }
