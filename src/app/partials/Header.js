@@ -7,7 +7,7 @@ import M from 'materialize-css';
 class Header extends Component {
     constructor(){
         super();
-        this.hamburgerBtn = React.createRef()
+        this.hamburgerBtn = React.createRef();
     }
     
     componentDidMount() {
@@ -30,19 +30,19 @@ class Header extends Component {
                             <a href="/BitBook" className="brand-logo">BitBook<i className="material-icons">group</i></a>
                             <a href="/BitBook" data-target="mobile-demo" className="sidenav-trigger right"  ><i className="material-icons">list</i></a>
                             <ul className="right hide-on-med-and-down">
-                                <li><Link to="/">Feed</Link></li>
-                                <li><Link to='/people'>People</Link></li>
-                                <li><Link to="/profile">Profile</Link></li>
-                                <li><a href='' onClick={this.onLogout}><i className="material-icons" >power_settings_new</i></a></li>
+                                <li className="sidenav-close"><Link to="/">Feed</Link></li>
+                                <li className="sidenav-close"><Link to='/people'>People</Link></li>
+                                <li className="sidenav-close"><Link to="/profile">Profile</Link></li>
+                                <li className="sidenav-close"><a href='' onClick={this.onLogout}><i className="material-icons" >power_settings_new</i></a></li>
                             </ul>
                         </div>
                     </div>
                 </nav>
                 <ul className="sidenav" id="mobile-demo" ref={this.hamburgerBtn}>
-                    <li><Link to="/">Feed</Link></li>
-                    <li><Link to='/people'>People</Link></li>
-                    <li><Link to="/profile">Profile</Link></li>
-                    <li><a href='' onClick={this.onLogout}><i className="material-icons" >power_settings_new</i>Logout</a></li>
+                    <li className="sidenav-close"><Link to="/">Feed</Link></li>
+                    <li className="sidenav-close"><Link to='/people'>People</Link></li>
+                    <li className="sidenav-close"><Link to="/profile">Profile</Link></li>
+                    <li className="sidenav-close"><a href='' onClick={this.onLogout}><i className="material-icons" >power_settings_new</i>Logout</a></li>
                 </ul>
             </div>
         )

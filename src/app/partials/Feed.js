@@ -55,10 +55,10 @@ export class Feed extends Component {
             <div className="row container feed">
                 <div className="col s12">
                     <FeedList posts={this.state.posts} selectedOption={this.state.selectedOption} />
-                    <FilterPost selectedPost={this.selectedPost} />
                     <Modals buttonType={this.state.buttonType} closeModal={this.resetButtonType} changeState={this.getPosts} />
                     <Buttons activeBtn={this.clickedBtn} />
                 </div>
+                <FilterPost selectedPost={this.selectedPost} />
             </div>
         )
     }
